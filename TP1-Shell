@@ -1,0 +1,69 @@
+ETAPE 1
+
+4.
+>pwd
+>ls
+>mkdir BigData_Shell
+>cd BigData_Shell
+>touch mejia_rodrigues.txt
+
+5.
+/eleves/home/leticia.rodrigues/BigData_Shell     (absolut)
+./BigData_Shell (relatif)
+
+6.
+LANG="fr_FR.UTF-8"
+
+7.
+export LANG=C
+
+
+
+ETAPE 2
+
+1.
+cat mejia_rodrigues.txt
+
+2.
+cp mejia_rodrigues.txt mejia_rodrigues-copy.txt 
+
+3.
+echo reponse >> mejia_rodrigues-copy.txt
+(echo "echo reponse >> mejia_rodrigues-copy.txt" >> mejia_rodrigues-copy.txt)
+
+4.
+cat mejia_rodrigues-copy.txt
+
+5.
+rm mejia_rodrigues.txt
+
+6.
+mv mejia_rodrigues-copy.txt mejia_rodrigues.txt
+
+
+ETAPE 3
+
+1.
+find -type f
+
+2.
+find -type f |grep le
+
+3.
+find /usr/include -maxdepth 1 -type f
+find /usr/include -maxdepth 1 -type d
+
+4.
+cat /usr/include/stdio.h | wc
+The size of the file is around 32K (du -h /usr/include/stdio.h) which is linked to the number of caracters.
+The exact size of the file (31365 bytes) is the same as the number of caracters (ls -l  /usr/include/stdio.h)
+ 
+5.
+find /usr/include -maxdepth 1 -type f | wc -l
+find /usr/include -type f | wc -l
+
+6.
+find /usr/include -type f -exec grep "^#" {} \; | wc -l
+
+7.
+find -type f |grep [^a-z]le[^a-z]
